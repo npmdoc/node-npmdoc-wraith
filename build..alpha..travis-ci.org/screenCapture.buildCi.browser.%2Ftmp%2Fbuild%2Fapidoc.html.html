@@ -1,0 +1,627 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/jamesryanbell/node-wraith">wraith (v2.0.2)</a>
+</h1>
+<h4>A responsive screenshot comparison tool. Based on the Ruby version available at http://github.comm/BBC-News/wraith</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wraith">module wraith</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.wraith">
+            function <span class="apidocSignatureSpan"></span>wraith
+            <span class="apidocSignatureSpan">(config, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">wraith.</span>gallery</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">wraith.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">wraith.</span>logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">wraith.</span>spider</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wraith.gallery">module wraith.gallery</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.gallery.generate">
+            function <span class="apidocSignatureSpan">wraith.gallery.</span>generate
+            <span class="apidocSignatureSpan">(dirs, compareList, outputDir, project, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wraith.helpers">module wraith.helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.helpers.emptyFolder">
+            function <span class="apidocSignatureSpan">wraith.helpers.</span>emptyFolder
+            <span class="apidocSignatureSpan">(folder, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.helpers.sortByProp">
+            function <span class="apidocSignatureSpan">wraith.helpers.</span>sortByProp
+            <span class="apidocSignatureSpan">(prop)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wraith.logger">module wraith.logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.logger.logger">
+            function <span class="apidocSignatureSpan">wraith.</span>logger
+            <span class="apidocSignatureSpan">(level, msg, hide)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.logger.error">
+            function <span class="apidocSignatureSpan">wraith.logger.</span>error
+            <span class="apidocSignatureSpan">(msg, hide)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.logger.info">
+            function <span class="apidocSignatureSpan">wraith.logger.</span>info
+            <span class="apidocSignatureSpan">(msg, hide)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.logger.log">
+            function <span class="apidocSignatureSpan">wraith.logger.</span>log
+            <span class="apidocSignatureSpan">(msg, hide)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.logger.success">
+            function <span class="apidocSignatureSpan">wraith.logger.</span>success
+            <span class="apidocSignatureSpan">(msg, hide)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.logger.warn">
+            function <span class="apidocSignatureSpan">wraith.logger.</span>warn
+            <span class="apidocSignatureSpan">(msg, hide)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.wraith.spider">module wraith.spider</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.wraith.spider.spider">
+            function <span class="apidocSignatureSpan">wraith.</span>spider
+            <span class="apidocSignatureSpan">(url, file, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wraith" id="apidoc.module.wraith">module wraith</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.wraith" id="apidoc.element.wraith.wraith">
+        function <span class="apidocSignatureSpan"></span>wraith
+        <span class="apidocSignatureSpan">(config, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Wraith(config, cb) {
+	var self  = this;
+	self.cb   = cb;
+	log.quiet = config.quiet;
+
+	if(config.paths &amp;&amp; config.paths.length &gt; 0) {
+		self.config(config);
+	} else if(config.spider &amp;&amp; config.spider !== '') {
+		if(!fs.existsSync(config.spider)) {
+			var spider = require('./spider');
+
+			spider.spider(config.domains[0], config.spider, function() {
+				self.config(config);
+			});
+		} else {
+			self.config(config);
+		}
+	} else {
+		log.error('You must specify either a list of pages or a location to store the spider file');
+		process.exit(1);
+		return false;
+	}
+	return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wraith.gallery" id="apidoc.module.wraith.gallery">module wraith.gallery</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.gallery.generate" id="apidoc.element.wraith.gallery.generate">
+        function <span class="apidocSignatureSpan">wraith.gallery.</span>generate
+        <span class="apidocSignatureSpan">(dirs, compareList, outputDir, project, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (dirs, compareList, outputDir, project, cb) {
+	compareList = compareList.sort(helpers.sortByProp('sort'));
+	var template = path.join(__dirname, '/../gallery.html');
+	var view = {
+		'images' : compareList,
+		'dirs': dirs.sort(),
+		'project': project,
+		'resolve': function() {
+			return function(text, render) {
+				var rendered = render(text);
+				return rendered.replace(/&amp;#x2F;/g, '/').replace(outputDir, '').replace(/^\//, '');
+			};
+		},
+		'contents': function() {
+			return function(text, render) {
+				var rendered = render(text);
+				var output = fs.readFileSync(rendered.replace(/&amp;#x2F;/g, '/').replace(/\/\//g,'/'),'utf8');
+				return output ? output : 0;
+			};
+		}
+	};
+
+	fs.readFile(template, function (err, data) {
+		if (err) { throw err; }
+		var output = mustache.render(data.toString(), view);
+		fs.writeFile(path.join(outputDir, 'gallery.html'), output, function(err) {
+			if(err) {
+				log.error(err);
+			} else {
+				log.success('Gallery generated');
+				cb();
+			}
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wraith.helpers" id="apidoc.module.wraith.helpers">module wraith.helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.helpers.emptyFolder" id="apidoc.element.wraith.helpers.emptyFolder">
+        function <span class="apidocSignatureSpan">wraith.helpers.</span>emptyFolder
+        <span class="apidocSignatureSpan">(folder, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emptyFolder = function (folder, cb) {
+	if(typeof(folder) === 'undefined') { return false; }
+
+	var rimraf = require('rimraf');
+	rimraf(folder, function(err) {
+		if( err ) { throw err; }
+		cb();
+	});
+	return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.helpers.sortByProp" id="apidoc.element.wraith.helpers.sortByProp">
+        function <span class="apidocSignatureSpan">wraith.helpers.</span>sortByProp
+        <span class="apidocSignatureSpan">(prop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sortByProp = function (prop) {
+	return function(a,b) {
+		if(a[prop] &gt; b[prop]) {
+			return 1;
+		} else if( a[prop] &lt; b[prop] ) {
+			return -1;
+		}
+		return 0;
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var fs       = require('fs');
+var path     = require('path');
+var mustache = require('mustache');
+var helpers  = require('./helpers');
+var log      = require('./logger');
+
+module.exports.generate = function(dirs, compareList, outputDir, project, cb) {
+	compareList = compareList.sort(helpers.<span class="apidocCodeKeywordSpan">sortByProp</span>('sort'));
+	var template = path.join(__dirname, '/../gallery.html');
+	var view = {
+		'images' : compareList,
+		'dirs': dirs.sort(),
+		'project': project,
+		'resolve': function() {
+			return function(text, render) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wraith.logger" id="apidoc.module.wraith.logger">module wraith.logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.logger.logger" id="apidoc.element.wraith.logger.logger">
+        function <span class="apidocSignatureSpan">wraith.</span>logger
+        <span class="apidocSignatureSpan">(level, msg, hide)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logger = function (level, msg, hide) {
+	var color = false;
+	switch(level) {
+		case 'error':
+			color = chalk.red.bold;
+			break;
+		case 'warn':
+			color = chalk.yellow.bold;
+			break;
+		case 'info':
+			color = chalk.blue.bold;
+			break;
+		case 'success':
+			color = chalk.green.bold;
+			break;
+	}
+	if(!hide &amp;&amp; !this.quiet) {
+		if(color) {
+			console.log(color(msg));
+		} else {
+			console.log(msg);
+		}
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+'use strict';
+
+var chalk      = require('chalk');
+var logSymbols = require('log-symbols');
+
+exports.error = function(msg, hide) {
+	this.<span class="apidocCodeKeywordSpan">logger</span>('error', logSymbols.error + ' ' + msg, hide);
+};
+
+exports.warn = function(msg, hide) {
+	this.logger('warn', logSymbols.warning + ' ' + msg, hide);
+};
+
+exports.success = function(msg, hide) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.logger.error" id="apidoc.element.wraith.logger.error">
+        function <span class="apidocSignatureSpan">wraith.logger.</span>error
+        <span class="apidocSignatureSpan">(msg, hide)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (msg, hide) {
+	this.logger('error', logSymbols.error + ' ' + msg, hide);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	};
+
+	fs.readFile(template, function (err, data) {
+		if (err) { throw err; }
+		var output = mustache.render(data.toString(), view);
+		fs.writeFile(path.join(outputDir, 'gallery.html'), output, function(err) {
+			if(err) {
+				log.<span class="apidocCodeKeywordSpan">error</span>(err);
+			} else {
+				log.success('Gallery generated');
+				cb();
+			}
+		});
+	});
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.logger.info" id="apidoc.element.wraith.logger.info">
+        function <span class="apidocSignatureSpan">wraith.logger.</span>info
+        <span class="apidocSignatureSpan">(msg, hide)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (msg, hide) {
+	this.logger('info', logSymbols.info + ' ' + msg, hide);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		config.quiet = true;
+	} else {
+		timer = moment();
+	}
+
+	new wraith(config, function() {
+		if(timer) {
+			log.<span class="apidocCodeKeywordSpan">info</span>('Time Taken: ' + moment().diff(timer, 'seconds') + &amp;#
+x27;s');
+		}
+		log.success('Done');
+	});
+
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.logger.log" id="apidoc.element.wraith.logger.log">
+        function <span class="apidocSignatureSpan">wraith.logger.</span>log
+        <span class="apidocSignatureSpan">(msg, hide)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (msg, hide) {
+	this.logger('log', msg, hide);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	npm install wraith --save-dev
+
+	var wraith = require('wraith');
+	var config = require('./config/chrome');
+
+	new Wraith(config, function() {
+		console.<span class="apidocCodeKeywordSpan">log</span>('Callback, do something else here!');
+	});
+
+	As the config is just an object you can change it at any point before calling
+	the wraith function e.g.
+
+	config.maxConnections = 10;
+	config.quiet = true;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.logger.success" id="apidoc.element.wraith.logger.success">
+        function <span class="apidocSignatureSpan">wraith.logger.</span>success
+        <span class="apidocSignatureSpan">(msg, hide)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">success = function (msg, hide) {
+	this.logger('success', logSymbols.success + ' ' + msg, hide);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		timer = moment();
+	}
+
+	new wraith(config, function() {
+		if(timer) {
+			log.info('Time Taken: ' + moment().diff(timer, 'seconds') + 's');
+		}
+		log.<span class="apidocCodeKeywordSpan">success</span>('Done');
+	});
+
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.logger.warn" id="apidoc.element.wraith.logger.warn">
+        function <span class="apidocSignatureSpan">wraith.logger.</span>warn
+        <span class="apidocSignatureSpan">(msg, hide)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function (msg, hide) {
+	this.logger('warn', logSymbols.warning + ' ' + msg, hide);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.wraith.spider" id="apidoc.module.wraith.spider">module wraith.spider</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.wraith.spider.spider" id="apidoc.element.wraith.spider.spider">
+        function <span class="apidocSignatureSpan">wraith.</span>spider
+        <span class="apidocSignatureSpan">(url, file, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spider = function (url, file, callback) {
+
+	log.log('Crawl of ' + url + ' started');
+
+	crawl.crawl(url, { headers: false, body: false }, function(err, pages) {
+
+		if (err) {
+			log.error('An error occured', err);
+			return;
+		}
+
+		var txt         = '';
+		var link        = '';
+		var pagesLength = pages.length;
+
+		for(var i = 0; i&lt;pagesLength; i++) {
+			link = pages[i].url;
+			var excPattern = new RegExp('.(css|js|jpg|jpeg|png|pdf|doc|xls|xlsx|ppt|txt|gif|swf|svg|ttf|otf|woff|json|xml)+$');
+			if(link.indexOf(url) === 0 &amp;&amp; !link.match(excPattern)) {
+				txt += link.replace(url, '') + '\n';
+			}
+		}
+
+		txt = txt.trim();
+
+		if(txt.length &gt; 0) {
+			var folders = file.split('/');
+			folders.pop();
+			folders = folders.join('/');
+
+			mkdirp(folders, function (err) {
+				if (err) { throw err; }
+				fs.writeFile(file, txt, function(err) {
+					if(err) {
+						log.error(err);
+					} else {
+						log.log('Spider file saved to ' + file);
+						callback();
+					}
+				});
+			});
+		} else {
+			log.error('No urls found');
+			process.exit(1);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
